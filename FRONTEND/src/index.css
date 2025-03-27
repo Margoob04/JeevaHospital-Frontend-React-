@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@import "tailwindcss";
+
+* {
+  font-family: "Outfit";
+}
+
+/* Define custom properties for colors */
+:root {
+  --primary: #1e6b7a;
+  --secondary: #1b96af;
+}
+
+/* Manually define bg-primary and hover:bg-primary */
+.bg-primary {
+  background-color: var(--primary);
+}
+.border-primary {
+  border-color: var(--primary);
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--primary);
+}
+
+/* Manually define bg-secondary and hover:bg-secondary */
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.hover\:bg-secondary:hover {
+  background-color: var(--secondary);
+}
+
+.active hr {
+  @apply block;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
